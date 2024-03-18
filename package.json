@@ -33,6 +33,6 @@
 	},
 	"devDependencies": {
 		"vscode": "0.10.x",
-		"typescript": "1.6.2"
+		"typescript": "5.4.2"
 	}
 }
