@@ -1,46 +1,46 @@
 {
-	"activationEvents": [
-		"onLanguage:markdown"
-	],
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWordCount/issues"
-	},
-	"description": "Markdown Word Count Example - a status bar contribution that reports out the number of words in a Markdown document as you interact with it.",
-	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6"
-	},
+	"name": "wordcount",
 	"displayName": "Word Count",
-	"galleryBanner": {
-		"color": "#C80000",
-		"theme": "dark"
-	},
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWordCount#readme",
-	"icon": "images/icon.png",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Markdown Word Count Example - a status bar contribution that reports out the number of words in a Markdown document as you interact with it.",
 	"keywords": [
 		"land"
 	],
-	"license": "SEE LICENSE IN LICENSE",
-	"main": "./out/extension",
-	"name": "wordcount",
-	"private": false,
-	"publishConfig": {
-		"access": "public"
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWordCount#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWordCount/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+HTTPS://github.com/CodeEditorLand/LandWordCount.git"
 	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension",
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
-	"type": "module",
-	"version": "0.0.1"
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "dark"
+	}
 }
