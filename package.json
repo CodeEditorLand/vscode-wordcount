@@ -1,0 +1,46 @@
+{
+	"name": "wordcount",
+	"displayName": "Word Count",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Markdown Word Count Example - a status bar contribution that reports out the number of words in a Markdown document as you interact with it.",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWordCount#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWordCount/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWordCount.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "dark"
+	}
+}
