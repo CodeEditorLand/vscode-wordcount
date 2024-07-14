@@ -1,18 +1,18 @@
 {
-	"name": "wordcount",
-	"displayName": "Word Count",
-	"description": "Markdown Word Count Example - a status bar contribution that reports out the number of words in a Markdown document as you interact with it.",
-	"main": "./out/extension",
-	"scripts": {
-		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
-	},
 	"activationEvents": [
 		"onLanguage:markdown"
 	],
+	"description": "Markdown Word Count Example - a status bar contribution that reports out the number of words in a Markdown document as you interact with it.",
 	"devDependencies": {},
-	"icon": "images/icon.png",
+	"displayName": "Word Count",
 	"galleryBanner": {
 		"color": "#C80000",
 		"theme": "dark"
+	},
+	"icon": "images/icon.png",
+	"main": "./out/extension",
+	"name": "wordcount",
+	"scripts": {
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
 	}
 }
