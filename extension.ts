@@ -20,6 +20,7 @@ export function activate(ctx: ExtensionContext) {
 
 	// create a new word counter
 	let wordCounter = new WordCounter();
+
 	let controller = new WordCounterController(wordCounter);
 
 	// add to a list of disposables which are disposed when this extension
@@ -41,8 +42,10 @@ export class WordCounter {
 
 		// Get the current text editor
 		let editor = window.activeTextEditor;
+
 		if (!editor) {
 			this._statusBarItem.hide();
+
 			return;
 		}
 
@@ -70,8 +73,11 @@ export class WordCounter {
 		docContent = docContent
 			.replace(/(< ([^>]+)<)/g, "")
 			.replace(/\s+/g, " ");
+
 		docContent = docContent.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
+
 		let wordCount = 0;
+
 		if (docContent != "") {
 			wordCount = docContent.split(" ").length;
 		}
