@@ -26,6 +26,7 @@ export function activate(ctx: ExtensionContext) {
 	// add to a list of disposables which are disposed when this extension
 	// is deactivated again.
 	ctx.subscriptions.push(controller);
+
 	ctx.subscriptions.push(wordCounter);
 }
 
@@ -60,6 +61,7 @@ export class WordCounter {
 				wordCount !== 1
 					? `$(pencil) ${wordCount} Words`
 					: "$(pencil) 1 Word";
+
 			this._statusBarItem.show();
 		} else {
 			this._statusBarItem.hide();
@@ -92,19 +94,23 @@ export class WordCounter {
 
 class WordCounterController {
 	private _wordCounter: WordCounter;
+
 	private _disposable: Disposable;
 
 	constructor(wordCounter: WordCounter) {
 		this._wordCounter = wordCounter;
+
 		this._wordCounter.updateWordCount();
 
 		// subscribe to selection change and editor activation events
 		let subscriptions: Disposable[] = [];
+
 		window.onDidChangeTextEditorSelection(
 			this._onEvent,
 			this,
 			subscriptions,
 		);
+
 		window.onDidChangeActiveTextEditor(this._onEvent, this, subscriptions);
 
 		// create a combined disposable from both event subscriptions
