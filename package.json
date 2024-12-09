@@ -2,6 +2,7 @@
 	"activationEvents": [
 		"onLanguage:markdown"
 	],
+	"dependencies": {},
 	"description": "Markdown Word Count Example - a status bar contribution that reports out the number of words in a Markdown document as you interact with it.",
 	"devDependencies": {},
 	"displayName": "Word Count",
